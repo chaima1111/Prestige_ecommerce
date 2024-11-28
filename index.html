@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/Homestyles.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 
@@ -19,18 +20,33 @@
             <img src="./assets/logo/ca.png" alt="">
         </div>
         <div class="links">
-            <h4 class="link_women">Women</h4>
-            <h4 class="link_men">Men</h4>
-            <h4 class="link_about">About</h4>
-            <h4 class="link_search"><i class="fa-solid fa-magnifying-glass link_search-icon"></i></h4>
+            <h4 class="link_search "><i class="fa-solid fa-magnifying-glass fa-xl link_search-icon"></i></h4>
+            <a class="link_women" href="#home">Home</a>
+            <h4 class="link_men">Shop</h4>
+            <a class="link_about" href="#about">About</a>
+            <h4 class="link_cart show_cart"><i class="fa-solid fa-cart-shopping fa-xl"></i></h4>
+            <h4 class="link_login show_cart"><i class="fa-regular fa-user fa-xl login"></i></h4>
         </div>
-        <div class="panier_button">
-            <button class="show_cart">Show Cart</button>
-            <!-- <button class="show_cart">Login</button> -->
-        </div>
+ 
     </div>
 
     <div class="element_container">
+
+        <div id="home" class="home_page">
+        
+            <div class="img_home">
+                <img src="./assets/home/Image_with_text_overlay_-_Desktop_-_business-bags.jpg" alt="">
+            </div>
+            <div class="txt_home">
+                <h1>Women Bags</h1>
+                <h6>With modern and timeless designs, our bags are made with high quality materials to ensure durability.
+                    Whether you're
+                    looking for a handbag for everyday use or a special occasion, our collection offers a variety of sizes and
+                    styles to fit
+                    every taste and need.</h6>
+            </div>
+        
+        </div>
         <!-- <div class="filters">
             <div class="search_name">
                 <label for="searchName" class="">Enter the product name</label>
@@ -39,8 +55,8 @@
         </div> -->
 
         <div class="products"></div>
-
         <div class="user_cart" id="userCart">
+
             <div class="user_cart-content">
                 <div class="user_cart-header">
                     <h2>Your Cart</h2>
@@ -57,11 +73,38 @@
             </div>
         </div>
 
+            <!-- <button>All womens Bag</button> -->
+        <footer id="about">
+            <div class="social_links">
+                <div class="logo log_fotter">
+                    <img src="./assets/logo/ca.png" alt="">
+                </div>
+                <div>
+               <h4>Enjoy wearing your Bags</h4> 
+                <i class="social_icon fa-brands fa-instagram"></i>
+                <i class="social_icon  fa-brands fa-facebook-f"></i>
+                <i class="social_icon  fa-brands fa-x-twitter"></i>
+                </div>
+            </div>
+            <div class="about_info">
+                <h1>About</h1>
+                <h6>About Us</h6>
+                <h6>Customer Support</h6>
+                <h6>Support Center</h6>
+            </div>
+            <div class="company_info">
+                <h1>Our Company</h1>
+                <h6>About us</h6>
+                <h6>Register</h6>
+                <h6>Contact Us</h6>
+            </div>
+        </footer>
 
-        <script src="js/main.js" src="module1.js"></script>
-        <script src="js/product.js"></script>
+
+        <script src="js/main.js" type="module" ></script>
+        <!-- <script src="js/product.js" type="module"></script> -->
         <script src="js/all.min.js"></script>
-    </div>
+   
 </body>
 
 </html>

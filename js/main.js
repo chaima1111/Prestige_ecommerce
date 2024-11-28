@@ -1,11 +1,11 @@
 function getRandomNumberGreaterThan10() {
   return Math.floor(Math.random() * 10000000000) + 11; // Range: 11 to 100
 }
- globalThis.productsWomen = [
+  let productsWomen = [
     {"id":getRandomNumberGreaterThan10(),
     "img":"./assets/women/product5/Le-Dino-Lisse-Noir-01.jpg",
     "images":["./assets/women/product5/Le-Dino-Lisse-Noir-02.jpg ","../assets/women/product5/Le-Dino-Lisse-Noir-02.jpg"],
-"name":"Le Mini Dalia Black Liégé",
+"name":"Le Dino Black Liégé",
 "desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
 "price":440.00,
 "color":[1,2,3],
@@ -13,7 +13,7 @@ function getRandomNumberGreaterThan10() {
     {"id":getRandomNumberGreaterThan10(),
     "img":"./assets/women/product4/Le-Dino-Lisse-Ivoire-01.jpg",
     "images":["../assets/women/product4/Le-Dino-Lisse-Ivoire-02.jpg ","../assets/women/product4/Le-Dino-Lisse-Ivoire-03.jpg"],
-"name":"Le Mini Dalia Black Liégé",
+"name":"Le Dino Ivory Liégé",
 "desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
 "price":440.00,
 "color":[1,2,3],
@@ -21,6 +21,38 @@ function getRandomNumberGreaterThan10() {
     {"id":getRandomNumberGreaterThan10(),
     "img":"./assets/women/product3/Grand-Nova-Lisse-Ivoire-013.jpg",
     "images":["../assets/women/product3/Grand-Nova-Lisse-Ivoire-02.jpg","../assets/women/product3/Grand-Nova-Lisse-Ivoire-3.jpg"],
+"name":"Le Dalia Ivory Liégé",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":380.00,
+"color":[1,2,4],
+},
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-01.jpg",
+    "images":["../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-02.jpg ","../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-03 .jpg"],
+"name":"Le Mini Dalia Black Liégé",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":380.00,
+"color":[1,2,4],
+},
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product1/Le-Mini-Dalia-Lisse-Noir-01.jpg ",
+    "images":["../assets/women/product1/Le-Mini-Dalia-Lisse-Noir-04.jpg ","../assets/women/product1/Le-Mini-Dalia-Lisse-Noir-05.jpg .jpg"],
+"name":"Le Dalia Black Liégé",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":380.00,
+"color":[1,2,4],
+},
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product7/Dalia-Embosse-lezard-Camel-01.jpg",
+    "images":["../assets/women/product7/Nova-Embosse-Lezard-Camel-02.jpg ","../aassets/women/product7/Dalia-Embosse-lezard-Camel-03.jpg"],
+"name":"Le Dalia Printed Lizard Camel",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":380.00,
+"color":[1,2,4],
+},
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-01.jpg",
+    "images":["../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-02.jpg ","../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-03 .jpg"],
 "name":"Le Mini Dalia Black Liégé",
 "desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
 "price":380.00,
@@ -34,9 +66,42 @@ function getRandomNumberGreaterThan10() {
 "price":380.00,
 "color":[1,2,4],
 },
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product8/Elegant-Cuir-Miroir-Noir-01.jpg",
+    "images":["../assets/women/product8/Elegant-Cuir-Miroir-Noir-02.jpg ","../assets/women/product8/Elegant-Cuir-Miroir-Noir-04.jpg"],
+"name":"Le Napoli Black",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":480.00,
+"color":[1,2,4],
+},
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product9/ipad-le-sac-elegant-1.jpg",
+    "images":["../assets/women/product8/Elegant-Cuir-Miroir-Noir-02.jpg ","../assets/women/product8/Elegant-Cuir-Miroir-Noir-04.jpg"],
+"name":"Le Napoli Burgundy",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":480.00,
+"color":[1,2,4],
+},
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product8/Elegant-Cuir-Miroir-Noir-01.jpg",
+    "images":["../assets/women/product9/ipad-le-sac-elegant-4.jpg ","../assets/women/product8/Elegant-Cuir-Miroir-Noir-04.jpg"],
+"name":"Le Mini Dalia Black Liégé",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":380.00,
+"color":[1,2,4],
+},
+    {"id":getRandomNumberGreaterThan10(),
+    "img":"./assets/women/product8/Elegant-Cuir-Miroir-Noir-01.jpg",
+    "images":["../assets/women/product8/Elegant-Cuir-Miroir-Noir-02.jpg ","../assets/women/product8/Elegant-Cuir-Miroir-Noir-04.jpg"],
+"name":"Le Mini Dalia Black Liégé",
+"desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
+"price":380.00,
+"color":[1,2,4],
+},
 ];
 let main_prod = document.querySelector(".products")
-console.log('main_prod: ', main_prod);
+
+
 let cartItems = document.getElementById("cartItems");
 let cartTotal = document.getElementById("cartTotal");
 addProduct(productsWomen)
@@ -94,6 +159,7 @@ let addToCartBtn = document.querySelectorAll(".product_add");
 let productCart = document.querySelectorAll(".product");
 let closeBtn = document.getElementById("closeBtn");
 let showBtn = document.querySelector(".show_cart")
+console.log('showBtn: ', showBtn);
 
 
 function addCart(products) {
@@ -320,4 +386,114 @@ function hideBtn(products) {
         })
     }
 }
+
+
+let search = document.querySelector(".link_search")
+// let elemenContShow = document.querySelector(".element_container-show")
+
+let elementsContShow = document.querySelector(".elements_container-show")
+
+console.log(elementsContShow)
+function searchShow(){
+search.addEventListener("click", (e) => {
+    if (e.target.classList.contains("link_search-icon")) {
+        let inputSearch = document.createElement("input")
+        inputSearch.classList.add("search_input")
+        inputSearch.setAttribute("id","searchName")
+        inputSearch.setAttribute("type", "text")
+        search.appendChild(inputSearch)
+ const searchInput = document.getElementById('searchName');
+ const prod = document.querySelectorAll(".product")
+      
+        
+
+function filterProducts(e){
+    //get the label input
+    const searchTerm = e.target.value;
+  
+
+    for (let i = 0; i < productsWomen.length; i++) {
+        //show the element with the same name
+        if(productsWomen[i].name.toLowerCase() == searchTerm){
+
+            let pr_id = productsWomen[i].id;
+            prod[pr_id].classList.remove('hidden');
+            console.log('prod[pr_id]: ', prod[pr_id]);
+
+        }
+        //hide the element without the same name
+        else {
+                        console.log('productsWomen[i].name: ', productsWomen[i].name);
+            console.log('searchTerm: ', searchTerm);
+                        console.log('productsWomen[i].name.toLowerCase() === searchTerm: ', productsWomen[i].name.toLowerCase() === searchTerm);
+
+            prod[i].classList.add('hidden');
+        }
+        
+    }
+    
+}
+searchInput.addEventListener('input', filterProducts(e));
+    }
+}, {once : true})
+}
+searchShow()
+
+
+
+
+
+
+// searchInput.addEventListener('input', ()=>{
+//     const searchTerm = searchInput.value.toLowerCase();
+//     for (let i = 0; i < productsWomen.length; i++) {
+
+//             if(searchTerm ==="")
+//                 prod[i].classList.remove('hidden');
+            
+//     }
+    
+// });
+let women_pro = document.querySelectorAll(".product")
+
+//change main image when mouse overing
+function changeImg(products) {
+    let image = document.querySelectorAll(".product_img")
+    for (let i = 0; i < products.length; i++) {
+        products[i].addEventListener("mouseover", (e) => {
+            // console.log(products[i].parentElement)
+            // location.href="../showPr.html"
+            if (e.target.classList.contains("product_img")) {
+                image[i].src=`${productsWomen[i]["images"][0]}`
+            }
+        })
+        products[i].addEventListener("mouseout", (e) => {
+            // console.log(products[i].parentElement)
+            // location.href="../showPr.html"
+            if (e.target.classList.contains("product_img")) {
+                image[i].src=`${productsWomen[i]["img"]}`
+            }
+        })
+        
+    }
+}
+changeImg(women_pro)
+
+export  function showDes(products) {
+        for (let i = 0; i < products.length; i++) {
+        
+        products[i].addEventListener("click", function (e) {
+                if (e.target.classList.contains("show_more")) {
+                location.href = "../showPr.html"
+
+            }
+        })
+    }
+
+}
+showDes(productWomen)
+
+
+
+// "desc":" This tote bag in deep navy blue . ",
 
