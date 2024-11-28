@@ -1,5 +1,6 @@
 let women_proBtn = document.querySelectorAll(".show_more")
 let women_pro = document.querySelectorAll(".product")
+
 let search = document.querySelector(".link_search")
 // let elemenContShow = document.querySelector(".element_container-show")
 
@@ -39,28 +40,29 @@ function changeImg(products) {
     }
 }
 
-console.log(women_pro)
-function showDes(products) {
 
-        for (let i = 0; i < productsWomen.length; i++) {
+function showDes(products) {
+console.log("form pr ")
+        for (let i = 0; i < products.length; i++) {
         
         products[i].addEventListener("click", function (e) {
 
             console.log('products[i].parentElement: ', products[i].parentElement);
             
                 if (e.target.classList.contains("show_more")) {
-                // location.href = "../showPr.html"
+                location.href = "../showPr.html"
 
             }
         })
     }
 
-
 }
+showDes(women_pro)
 
 function create_show(product) {
     let elemenContShow = document.createElement("div")
-elemenContShow.classList.add("element_container-show","show_hidden")
+// elemenContShow.classList.add("element_container-show","show_hidden")
+elemenContShow.classList.add("element_container-show")
     elemenContShow.innerHTML = ` <div class="desc_product-images-gallery">
     <div class="desc_product-img">
             <img src=${product["img"]} alt="">
@@ -113,8 +115,8 @@ create_show(productsWomen[i])
 // create_show(productsWomen[0])
 // create_show(productsWomen[2])
 // 
-// showDes(women_pro)
-console.log('women_pro: ', productsWomen);
+
+
 // showDes(women_pro)
 
 
