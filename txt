@@ -1,0 +1,43 @@
+<div class="desc_product-images-gallery">
+    <div class="desc_product-img">
+            <img src="./assets/women/product5/Le-Dino-Lisse-Noir-01.jpg" alt="">
+            <img class="images_product" src="./assets/women/product5/Le-Dino-Lisse-Noir-02.jpg" alt="">
+            <img class="images_product" src="./assets/women/product5/Le-Dino-Lisse-Noir-03.jpg" alt="">
+        </div>
+
+    <div class="desc_product-img-main">
+                    <img src="./assets/women/product5/Le-Dino-Lisse-Noir-01.jpg" alt="">
+                </div>
+    </div>
+<!-- product info section -->
+       <div class="product_info">
+       <div class="desc_product-images-txt">
+            <h3>e Mini Dalia Black Liégé</h3>
+            <div class="rating-price">
+                <h6>$440.00</h6>
+                <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+       </div>
+       <!-- <hr> -->
+       <div class="product_colors">
+            <div class="color color1"></div>
+            <div class=" color color2"></div>
+            <div class="color color3"></div>
+       </div>
+       <div  class="desc_product-images-desc">
+        <p>
+            Italian leather hobo bag with zip and magnetic brass clasp. Compatible with A5/iPad Pro 11" format. Can be worn on the
+            shoulder or carried in the hand. Magnetic pocket on the back. Inside flat pocket. Adjustable handle. Beige suede lining.
+            Handmade in Italy.
+        </p>
+       </div>
+       <div class="div_show_add_cart">
+       <button class="show_add_cart">Add To CART</button>
+    </div>
+    </div>

@@ -1,0 +1,126 @@
+.element_container-show{
+display: flex;
+    margin: 0px;
+    background: #efefef;
+    padding: 10px;
+    gap: 30px;
+}
+/* Image Gallery */
+
+.desc_product-images-gallery{
+        margin-right: 20px;
+        display: flex;
+
+}
+
+.desc_product-img{
+    display: flex;
+        flex-direction: column;
+        gap: 10px;
+}
+
+.desc_product-img img {
+width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+}
+.desc_product-img img:hover {
+    border-color: #333;
+}
+.desc_product-img-main{
+    flex: 1;
+}
+.desc_product-img-main img{
+
+    width: 80%;
+        height: auto;
+        border-radius: 8px;
+}
+
+
+/* Product Info */
+
+.product_info{
+    flex:1;
+    flex-basis: 50%;
+}
+.desc_product-images-txt{
+    margin: 20px;
+
+}
+.desc_product-images-txt h3{
+    padding-top: 20px;
+}
+.desc_product-images-desc{
+    margin: 10px;
+}
+.rating-price{
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating-price h6{
+    font-size: 15px;
+    color: #333;
+}
+/* colors of products */
+.product_colors{
+    margin: 20px;
+    display: flex;
+        gap: 10px;
+}
+.rating{
+    margin-left: 20px;
+display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.color {
+ 
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50%; */
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.color1{
+    background-color: #1b1e1d;
+}
+.color2{
+    background-color: #e1dacf;
+}
+.color3{
+    background-color: #4c1c1f;
+}
+.color4{
+    background-color: #88957c;
+}
+.div_show_add_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show_add_cart{
+    margin-top: 25px;
+    width: 90%;
+
+        padding: 12px;
+        background-color: #1c1c1c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.1s ease-in-out;
+}
+
+.show_hidden{
+    display: none;
+}
