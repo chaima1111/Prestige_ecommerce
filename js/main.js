@@ -3,15 +3,15 @@ function getRandomNumberGreaterThan10() {
 }
   let productsWomen = [
     {"id":getRandomNumberGreaterThan10(),
-    "img":"./assets/women/product5/Le-Dino-Lisse-Noir-01.jpg",
-    "images":["./assets/women/product5/Le-Dino-Lisse-Noir-02.jpg ","../assets/women/product5/Le-Dino-Lisse-Noir-02.jpg"],
+    "img":"../assets/women/product5/Le-Dino-Lisse-Noir-01.jpg",
+    "images":["../assets/women/product5/Le-Dino-Lisse-Noir-02.jpg ","../assets/women/product5/Le-Dino-Lisse-Noir-03.jpg"],
 "name":"Le Dino Black Liégé",
 "desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
 "price":440.00,
 "color":[1,2,3],
 },
     {"id":getRandomNumberGreaterThan10(),
-    "img":"./assets/women/product4/Le-Dino-Lisse-Ivoire-01.jpg",
+    "img":"../assets/women/product4/Le-Dino-Lisse-Ivoire-01.jpg",
     "images":["../assets/women/product4/Le-Dino-Lisse-Ivoire-02.jpg ","../assets/women/product4/Le-Dino-Lisse-Ivoire-03.jpg"],
 "name":"Le Dino Ivory Liégé",
 "desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
@@ -19,7 +19,7 @@ function getRandomNumberGreaterThan10() {
 "color":[1,2,3],
 },
     {"id":getRandomNumberGreaterThan10(),
-    "img":"./assets/women/product3/Grand-Nova-Lisse-Ivoire-013.jpg",
+    "img":"../assets/women/product3/Grand-Nova-Lisse-Ivoire-013.jpg",
     "images":["../assets/women/product3/Grand-Nova-Lisse-Ivoire-02.jpg","../assets/women/product3/Grand-Nova-Lisse-Ivoire-3.jpg"],
 "name":"Le Dalia Ivory Liégé",
 "desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
@@ -52,7 +52,7 @@ function getRandomNumberGreaterThan10() {
 },
     {"id":getRandomNumberGreaterThan10(),
     "img":"./assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-01.jpg",
-    "images":["../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-02.jpg ","../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-03 .jpg"],
+    "images":["../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-02.jpg ","../assets/women/product6/Le-Mini-Dalia-Lisse-Ivoire-03.jpg"],
 "name":"Le Mini Dalia Black Liégé",
 "desc":"'Baguette' bag created in collaboration with Wendy Swan. Inspired by the Parisian and minimalist style of Wendy, this bag is constructed with 3 flexible gussets allowing a good capacity. Two shoulder straps for shoulder or cross-body carry. Optional short shoulder strap. XL smartphone compatible (ex iPhone 13 pro Max). Secure turnstile clasp, brass. Handmade in Italy.",
 "price":380.00,
@@ -484,7 +484,10 @@ export  function showDes(products) {
         
         products[i].addEventListener("click", function (e) {
                 if (e.target.classList.contains("show_more")) {
-                location.href = "../showPr.html"
+                    localStorage.setItem('selectedProduct', JSON.stringify(productsWomen[i]));
+            
+                    
+                    location.href = "../showPr.html"
 
             }
         })
