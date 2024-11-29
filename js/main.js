@@ -101,7 +101,6 @@ function getRandomNumberGreaterThan10() {
 ];
 let main_prod = document.querySelector(".products")
 
-
 let cartItems = document.getElementById("cartItems");
 let cartTotal = document.getElementById("cartTotal");
 addProduct(productsWomen)
@@ -159,15 +158,18 @@ let addToCartBtn = document.querySelectorAll(".product_add");
 let productCart = document.querySelectorAll(".product");
 let closeBtn = document.getElementById("closeBtn");
 let showBtn = document.querySelector(".show_cart")
-console.log('showBtn: ', showBtn);
 
 
 function addCart(products) {
     for (let i = 0; i < addToCartBtn.length; i++) {
         addToCartBtn[i].addEventListener('click', () => {
             //verify if the element already exist
+
             const findItem = cart.find(item => item.id == addToCartBtn[i].getAttribute("data-id"))
-            if (findItem) {
+            const findItemBool = cart.find(item => item.id == addToCartBtn[i].getAttribute("data-id"))!== undefined ? true : false
+            console.log('cart: ', cart);
+            console.log('findItem: ', findItem);
+            if (findItemBool) {
                 findItem.quantity += 1;
             } else {
                 let id = products[i].id

@@ -1,6 +1,5 @@
 let women_proBtn = document.querySelectorAll(".show_more")
 let women_pro = document.querySelectorAll(".product")
-// console.log(productsWomen)
 let elementsContShow = document.querySelector(".elements_container-show")
 
 function create_show() {
@@ -55,9 +54,9 @@ elemenContShow.classList.add("element_container-show")
 create_show()
 
 let change_img =  document.querySelector(".main_chose-img")
-console.log('change_img: ', change_img);
+
 let change_imgArr =  document.querySelectorAll(".chosen_img")
-console.log('change_imgArr: ', change_imgArr);
+
 
 for (let i = 0; i < change_imgArr.length; i++) {
           const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
@@ -78,4 +77,129 @@ function changeSelectedImg() {
 }
 
 // showDes(women_pro)
+let userCart = document.getElementById("userCart");
+let cart = [];
+let addToCartBtn = document.querySelectorAll(".product_add");
+let productCart = document.querySelectorAll(".product");
+let closeBtn = document.getElementById("closeBtn");
 
+
+//chech if there is products in localstorage
+
+cart =JSON.parse(localStorage.getItem("cart"))
+
+let showBtn = document.querySelector(".show_add_cart")
+
+closeBtn.addEventListener('click',hideCart);
+getDataLocalStr()
+function getDataLocalStr() {
+    let data = window.localStorage.getItem("cart");
+    if (data) {
+        //array has data in local storage
+        let arr = JSON.parse(data) 
+        updateCart(arr)
+    }
+}
+function addCart() {
+          const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+          console.log('selectedProduct: ', selectedProduct);
+
+        showBtn.addEventListener('click', () => {
+            //verify if the element already exist
+            const findItem = cart.find(item => item.id == selectedProduct.id);
+            const findItemBool = cart.find(item => item.id == selectedProduct.id) !== undefined ? true : false;
+            console.log('cart: ', cart);
+            console.log('findItem: ', findItem);
+            if (findItemBool) {
+                findItem.quantity += 1;
+            } else {
+                
+                let id = selectedProduct.id
+                let img = selectedProduct.img
+                let name = selectedProduct.name;
+                let price = selectedProduct.price
+                cart.push({
+                    id,
+                    img,
+                    name,
+                    price,
+                    quantity: 1,
+                })
+            
+            }
+            addDataToLocalSFrom(cart)
+            updateCart(cart)
+            showCart()
+        })
+
+    }
+addCart()
+
+
+    
+showBtn.onclick = () => {
+    updateCart(cart)
+    showCart()
+}
+
+function showCart() {
+    userCart.classList.add('show');
+}
+
+function hideCart() {
+    userCart.classList.remove('show');
+}
+//removing cart if i click outside
+window.addEventListener('click', (e) => {
+    if (e.target === userCart) {
+        hideCart();
+    }
+});
+
+function updateCart(cart) {
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="text-gray-500 text-center py-4">Your cart is empty</p>';
+    }else{
+    cartItems.innerHTML= cart.map(item=>`        
+        <div class="user_cart-item" data-id=${item.id}>
+            <div>
+                 <img src="${item.img}" class ="cart_img" alt="">
+                <h3>${item.name}</h3>
+                <p>Quantity: ${item.quantity}</p>
+                </div>
+                <div>  
+                <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                <button 
+                        class="remove-item remove_pro" 
+                        aria-label="Remove item" data-id=${item.id} >Remove</button>
+            </div>
+           <hr>
+        </div>  `).join('');
+
+    
+    }
+
+
+    const total = cart.reduce((sum,item)=>{return sum+(item.price * item.quantity)},0)
+    cartTotal.textContent = total.toFixed(2);
+ let items = document.getElementsByClassName("user_cart-item")
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener("click", (e) => {
+        if (e.target.classList.contains("remove-item")) {
+            removeFromCart(e.target.parentElement.parentElement.getAttribute("data-id"))        
+            e.target.parentElement.parentElement.remove()
+        }
+    })
+}
+}
+function removeFromCart(id) {
+
+    cart = cart.filter((item) => {
+        return item.id !=id
+    });
+    updateCart(cart);
+   addDataToLocalSFrom(cart)
+}
+function addDataToLocalSFrom(cart) {
+    window.localStorage.setItem("cart",JSON.stringify(cart))
+}
