@@ -2,8 +2,9 @@ let women_proBtn = document.querySelectorAll(".show_more")
 let women_pro = document.querySelectorAll(".product")
 let elementsContShow = document.querySelector(".elements_container-show")
 
+const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+/********************creating description HTML************************** */
 function create_show() {
-      const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
    if (!selectedProduct) return;
     let elemenContShow = document.createElement("div")
 // elemenContShow.classList.add("element_container-show","show_hidden")
@@ -54,7 +55,6 @@ elemenContShow.classList.add("element_container-show")
 create_show()
 
 let change_img =  document.querySelector(".main_chose-img")
-
 let change_imgArr =  document.querySelectorAll(".chosen_img")
 
 
@@ -76,7 +76,7 @@ function changeSelectedImg() {
     
 }
 
-// showDes(women_pro)
+//cart functions
 let userCart = document.getElementById("userCart");
 let cart = [];
 let addToCartBtn = document.querySelectorAll(".product_add");
@@ -84,7 +84,7 @@ let productCart = document.querySelectorAll(".product");
 let closeBtn = document.getElementById("closeBtn");
 
 
-//chech if there is products in localstorage
+//***************************************CART*********************** */
 
 cart =JSON.parse(localStorage.getItem("cart"))
 
@@ -102,7 +102,6 @@ function getDataLocalStr() {
 }
 function addCart() {
           const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
-          console.log('selectedProduct: ', selectedProduct);
 
         showBtn.addEventListener('click', () => {
             //verify if the element already exist
@@ -134,8 +133,6 @@ function addCart() {
 
     }
 addCart()
-
-
     
 showBtn.onclick = () => {
     updateCart(cart)
@@ -203,3 +200,105 @@ function removeFromCart(id) {
 function addDataToLocalSFrom(cart) {
     window.localStorage.setItem("cart",JSON.stringify(cart))
 }
+
+
+//*****************************you may like section*************************
+
+let mayLikeProd = document.querySelector(".may_like-products");
+
+let realtedProd0 =JSON.parse(localStorage.getItem("realtedProd0"))
+
+let realtedProd1 =JSON.parse(localStorage.getItem("realtedProd1"))
+
+let realtedProd2 =JSON.parse(localStorage.getItem("realtedProd2"))
+if(realtedProd0!==undefined)
+addProduct(realtedProd0) 
+addProduct(realtedProd1)
+addProduct(realtedProd2)
+
+let arrRellated = []
+arrRellated.push(realtedProd0)
+arrRellated.push(realtedProd1)
+arrRellated.push(realtedProd2)
+
+
+function addProduct (products){
+        let imgProduct = document.createElement("img");
+        let divProduct = document.createElement("div");
+        let btnCont = document.createElement("div");
+        let nameProduct =document.createElement("h3");
+        let priceProducnt = document.createElement("h6");
+        let more = document.createElement("button");
+
+        let nameText =document.createTextNode(`${products.name}`);
+        let priceText =document.createTextNode(`$${products.price}`);
+        let moreTxt =document.createTextNode("show more");
+        
+        imgProduct.src= products.img;
+        nameProduct.appendChild(nameText);
+        priceProducnt.appendChild(priceText);
+        more.appendChild(moreTxt);
+        
+
+        divProduct.setAttribute("class","product")
+        divProduct.setAttribute("data-id",products.id)
+        btnCont.setAttribute("class", "product_add")
+        imgProduct.setAttribute("class","product_img")
+        nameProduct.setAttribute("class","product_name")
+        priceProducnt.setAttribute("class", "product_price")
+        more.setAttribute("class", "show_more")
+        
+
+        divProduct.appendChild(imgProduct)
+        divProduct.appendChild(nameProduct)
+        divProduct.appendChild(priceProducnt)
+        divProduct.appendChild(more)
+        mayLikeProd.appendChild(divProduct)
+
+}
+
+let mayPrHover = document.querySelectorAll(".product")
+console.log('mayPrHover: ', mayPrHover);
+
+//change main image when mouse overing
+function changeImg(products) {
+    let image = document.querySelectorAll(".product_img")
+    for (let i = 0; i < products.length; i++) {
+        products[i].addEventListener("mouseover", (e) => {
+            if (e.target.classList.contains("product_img")) {
+                image[i].src=`${arrRellated[i]["images"][0]}`
+            }
+        })
+        products[i].addEventListener("mouseout", (e) => {
+            if (e.target.classList.contains("product_img")) {
+                image[i].src=`${arrRellated[i]["img"]}`
+            }
+        })
+        
+    }
+}
+changeImg(mayPrHover)
+
+            let generalPr= JSON.parse(localStorage.getItem("WomanProducts"))
+            console.log('generalPr: ', generalPr);
+
+ function showDes1(products) {
+        for (let i = 0; i < products.length; i++) {
+        
+        products[i].addEventListener("click", function (e) {
+                if (e.target.classList.contains("show_more")) {
+                    localStorage.setItem('selectedProduct', JSON.stringify(generalPr[i]));
+                    let realtedProd = generalPr[i].mayLike;
+                    for (let j = 0; j < realtedProd.length; j++) {
+                    localStorage.setItem(`realtedProd${j}`, JSON.stringify(generalPr[realtedProd[j]]));       
+                    }
+                    localStorage.setItem('selectedProduct', JSON.stringify(generalPr[i]));       
+                    location.href = "../showPr.html"
+
+            }
+        })
+    }
+
+}
+showDes1(mayPrHover)
+

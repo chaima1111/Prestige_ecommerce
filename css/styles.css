@@ -63,19 +63,45 @@ font-family: var(--heading-font-family);
     letter-spacing: var(--heading-letter-spacing);
     text-transform: var(--heading-text-transform);
     font-size: 13px;
-    overflow-wrap: anywhere;
-    border: none;
-    color: white;
-    background-color: #1c1c1c;
+    color: #1c1c1c;
+    background-color: white;
+    border: 1px solid #1c1c1c;
     margin: 10px;
     padding: 13px;
     width: 170px;
     border-radius: 10px;
     align-items: flex-end;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    z-index: 1;
+    }
+    
+    .show_more:hover{
+        color: white;
+    }
+    
+    .show_more::before{
+        content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #1c1c1c;
+    z-index: -1;
+    transition: width 0.3s ease;  
+
+}
+
+.show_more:hover::before{
+    width: 100%;
+
 }
 .logo img{
-    width: 35%;
-
+    width: 43%;
+    
 }
 
 .links{
@@ -117,25 +143,23 @@ font-family: var(--heading-font-family);
 
 .filters {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .search_name {
-    margin: 20px;
-    padding: 10px;
+    margin-top: 20px;
+    padding: 15px;
     display: flex;
     font-size: 30px;
     font-family: var(----heading-font-family);
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-    background-color: #eeee;
+    flex-direction: row;
+    gap: 10px;
     border-radius: 20px;
-    padding: 30px;
-
-
+/* background-color: white; */
 }
 
 ::placeholder {
@@ -150,9 +174,19 @@ font-family: var(--heading-font-family);
     font-size: 20px;
     border-radius: 15px;
     color: white;
-    background-color: #1c1c1c;
+    background-color: #1c1c1c !important;;
+}
+.search_name>input:focus {
+    outline: none;
+    background-color: black !important;
+
 }
 
+.search_name>input:-webkit-autofill {
+    background-color: white !important;
+    color: #000 !important;
+
+}
 /* products */
 
 .products {
@@ -240,6 +274,8 @@ font-family: var(--heading-font-family);
     transition: right 0.3s ease;
     cursor: pointer;
 }
+
+
 .product_add.button-visible {
   display: block;
 }

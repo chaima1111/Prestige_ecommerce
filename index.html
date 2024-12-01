@@ -20,9 +20,8 @@
             <img src="./assets/logo/ca.png" alt="">
         </div>
         <div class="links">
-            <h4 class="link_search "><i class="fa-solid fa-magnifying-glass fa-xl link_search-icon"></i></h4>
             <a class="link_women" href="#home">Home</a>
-            <h4 class="link_men">Shop</h4>
+            <a class="link_men" href="#shop">Shop</a>
             <a class="link_about" href="#about">About</a>
             <h4 class="link_cart show_cart"><i class="fa-solid fa-cart-shopping fa-xl"></i></h4>
             <h4 class="link_login show_cart"><i class="fa-regular fa-user fa-xl login"></i></h4>
@@ -47,16 +46,19 @@
             </div>
         
         </div>
-        <!-- <div class="filters">
+                <!-- **********************filters ******************** -->
+
+        <div class="filters">
             <div class="search_name">
-                <label for="searchName" class="">Enter the product name</label>
-                <input type="text" id="searchName" placeholder="blue bag">
+            <h4 class="link_search "><i class="fa-solid fa-magnifying-glass fa-xl link_search-icon"></i></h4>
+            <input type="text" id="searchName" placeholder="enter name">
             </div>
-        </div> -->
+        </div>
+        <!-- **********************Products ******************** -->
 
-        <div class="products"></div>
+        <div class="products" id="shop"></div>
+        <!-- **********************user Cart ******************** -->
         <div class="user_cart" id="userCart">
-
             <div class="user_cart-content">
                 <div class="user_cart-header">
                     <h2>Your Cart</h2>
@@ -102,7 +104,7 @@
 
 
         <script src="js/main.js" type="module" ></script>
-        <!-- <script src="js/product.js" type="module"></script> -->
+        <script src="js/product.js" ></script>
         <script src="js/all.min.js"></script>
    
 </body>

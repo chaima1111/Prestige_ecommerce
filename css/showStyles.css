@@ -136,14 +136,39 @@ display: flex;
     width: 90%;
 
         padding: 12px;
-        background-color: #1c1c1c;
-        color: white;
+background-color: #1c1c1c;
+   color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
-        transition: background 0.1s ease-in-out;
-}
+        cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s;
+            z-index: 1;
+    }
+
+        .show_add_cart:hover {
+            color: #1c1c1c;
+        }
+    
+        .show_add_cart::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: white;
+            z-index: -1;
+            transition: width 0.3s ease;
+    
+        }
+    
+        .show_add_cart:hover::before {
+            width: 100%;
+         }
 
 .appear{
     display: flex;

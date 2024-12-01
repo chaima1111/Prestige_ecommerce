@@ -1,9 +1,6 @@
 
 .home_page{
-    /* display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-direction: row; */
+
     position: relative;
 }
 
@@ -55,7 +52,31 @@ z-index: 12;
     margin-right: 60px;
     text-align: center;
 }
+/******************************RESPO HOME *****************************/
+@media (max-width: 1024px) {
+.txt_home {
+        top: 0%;
+        margin: 2px;
+    }
+        .img_home img {
+            width: 100%;
+            height: 150%;
+        }
 
+}
+
+@media (max-width: 600px) {
+ 
+.txt_home {
+        top: 0%;
+        margin: 2px;
+    }
+        .img_home img {
+            width: 100%;
+            height: 150%;
+        }
+}
+/*************************************FOOTER****************************/
 footer{
     margin: 50px;
     display: flex;

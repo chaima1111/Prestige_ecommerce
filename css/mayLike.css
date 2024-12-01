@@ -1,0 +1,26 @@
+.may_like-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: 30px;
+    
+}
+
+.may_like-container h1{
+    font-size: 30px;
+}
+
+.may_like-products{
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+        gap: 15px;
+        margin: 10px;
+        background-color: #efefef;
+        width: 100%;
+}
